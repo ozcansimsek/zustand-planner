@@ -18,7 +18,8 @@ function App() {
     store.fetchPublicHolidays((thisYear - 1).toString()); // todo: fetch dynamically
     store.fetchPublicHolidays(thisYear.toString());
     store.fetchPublicHolidays((thisYear + 1).toString());
-  }, []);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [thisYear]);
 
   return (
     <>
